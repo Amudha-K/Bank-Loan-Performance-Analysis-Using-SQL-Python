@@ -1,6 +1,7 @@
 # Bank-Loan-Performance-Analysis-Using-SQL-Python 
 ## Project Overview
-This project involves the development of a comprehensive Bank Loan Report designed to monitor and assess a bank's lending activities. By transforming raw data into actionable insights, this report helps stakeholders track loan portfolio health, identify seasonal trends, and evaluate borrower risk profiles.  
+This project involves the development of a comprehensive Bank Loan Report designed to monitor and assess a bank's lending activities. By transforming raw data into actionable insights, this report helps stakeholders track loan portfolio health, identify seasonal trends, and evaluate borrower risk profiles.Additionally, a grade-level revenue vs credit risk analysis was performed to understand the trade-off between loan profitability and default risk.
+  
 
 ## Problem Statement
 The bank required a data-driven solution to monitor lending performance. Key objectives included:  
@@ -8,7 +9,9 @@ The bank required a data-driven solution to monitor lending performance. Key obj
 ● Tracking MTD (Month-to-Date) and MoM (Month-over-Month) growth for applications and funding.  
 ● Distinguishing between Good Loans (Fully Paid/Current) and Bad Loans (Charged Off) to assess portfolio risk.  
 ● Analyzing borrower demographics (Employment, Home Ownership) and loan characteristics (DTI, Interest Rates).  
-● Support data-driven lending and risk management decisions  
+● Support data-driven lending and risk management decisions.    
+● Identifying loan grades that generate high funding volumes while carrying elevated default risk.
+
 
 ## Tools & Technologies
 ● SQL Server Management Studio – Used to store, manage, and query bank loan data.  
@@ -38,6 +41,8 @@ pip install pandas numpy matplotlib seaborn plotly
 ● Total Amount Received  
 ● Average Interest Rate  
 ● Average Debt-to-Income Ratio (DTI)  
+● Default Rate (%) by Loan Grade
+
 
 ## Dashboard Highlights
 ### 1. Summary Dashboard  
@@ -50,6 +55,8 @@ Focuses on trends and segmentation.
 ● Seasonality: A line chart showing a steady increase in loan applications from January through December.    
 ● Demographics: Analysis by employment length (10+ years being the largest segment) and home ownership (Rent/Mortgage).    
 ● Purpose: "Debt Consolidation" identified as the primary reason for borrowing.  
+● Credit Risk vs Revenue: Comparing total funded amount and default rate across loan grades to highlight risk–reward trade-offs.
+
 
 ### 3. Details Dashboard
 Provides complete transparency through a detailed, record-level loan view.  
@@ -63,6 +70,9 @@ Provides complete transparency through a detailed, record-level loan view.
 ● Risk Profile: Bad loans account for 13.8% of total applications, representing $65.5M in funded capital.  
 ● Regional Performance: Strategic lending activity is concentrated in specific states.    
 ● Loan Characteristics: The average DTI stands at 13.3%, suggesting a generally healthy borrower profile.  
+● Revenue vs Risk Trade-off: Loan Grades B and C contribute the highest funded amounts, making them key revenue drivers.  
+● Credit Risk Concentration: Higher-risk grades (E, F, and G) show significantly higher default rates, indicating increased credit exposure despite lower funding volumes.
+
 
 ## Project Outcomes
 ● Identified 13.8% Charged-Off loans ($65.5M) through Good vs Bad loan segmentation, supporting risk control.  
@@ -70,6 +80,8 @@ Provides complete transparency through a detailed, record-level loan view.
 ● Confirmed strong recovery with $473.1M collected against an average 12.0% interest rate.  
 ● Automated MTD and MoM KPI tracking using SQL for real-time performance monitoring.  
 ● Revealed Debt Consolidation as the top loan purpose and 10+ year employees as the most stable borrowers.  
+● Introduced a grade-level revenue vs credit risk analysis to support balanced lending decisions between profitability and portfolio stability.
+
 
 ## Conclusion
 This project successfully delivers an end-to-end bank loan analysis solution using SQL, Python, and interactive dashboards. By tracking key lending KPIs, classifying loan risk, and analyzing borrower behavior, the report provides clear visibility into portfolio performance and credit quality. The insights generated support data-driven decision-making, risk mitigation, and strategic planning, making this analysis highly relevant for real-world banking and financial analytics use cases.
